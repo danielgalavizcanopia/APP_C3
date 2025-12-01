@@ -1,0 +1,60 @@
+<div class="grid">
+    <p-card class="col-4">
+        <p class="font-bold pb-3">Buyer Approvals</p>
+        <div class="col-12 md:col-12">
+            <p-floatlabel>
+                <p-datepicker styleClass="w-full" inputId="over_label" showIcon iconDisplay="input" />
+                <label for="over_label">ERPA Approval by Buyer</label>
+            </p-floatlabel>
+        </div>
+    </p-card>
+    <p-card class="col-4">
+        <p class="font-bold pb-3">Project Counterpart Approvals</p>
+        <div class="col-12 md:col-12">
+            <p-floatlabel>
+                <p-datepicker styleClass="w-full" inputId="over_label" showIcon iconDisplay="input" />
+                <label for="over_label">Project Approval</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-12">
+            <p-floatlabel>
+                <p-datepicker styleClass="w-full" inputId="over_label" showIcon iconDisplay="input" />
+                <label for="over_label">ERPA Approved by Project Counterpart</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-12">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Approved Buyer</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-12">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Percentage Mkt Price</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-12">
+            <p-floatlabel>
+                <p-datepicker styleClass="w-full" inputId="over_label" showIcon iconDisplay="input" />
+                <label for="over_label">Project Developer Contract Approved by Project Counterpart</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-12">
+            <p-floatlabel>
+                <p-datepicker styleClass="w-full" inputId="over_label" showIcon iconDisplay="input" />
+                <label for="over_label">Aggregation Approval by Project Counterpart</label>
+            </p-floatlabel>
+        </div>
+    </p-card>
+
+        <p-card class="col-4">
+        <p class="font-bold pb-3">Canopia Approvals</p>
+        <div class="col-12 md:col-12">
+            <p-floatlabel>
+                <p-datepicker styleClass="w-full" inputId="over_label" showIcon iconDisplay="input" />
+                <label for="over_label">Project Developer Contract Approved by Canopia</label>
+            </p-floatlabel>
+        </div>
+    </p-card>
+</div>

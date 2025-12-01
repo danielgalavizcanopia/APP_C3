@@ -1,0 +1,37 @@
+<p-card class="col-12">
+    <p class="font-bold pb-3">Activity Area</p>
+    <div class="grid">
+            <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Activity Area (ha)</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Validation status AA</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Version AA</label>
+            </p-floatlabel>
+        </div>
+
+
+        <div class="col-12 md:col-12">
+            <p-floatlabel>
+                <textarea pTextarea id="over_label" rows="3" class="w-full"></textarea>
+                <label for="over_label">Notes AA</label>
+            </p-floatlabel>
+        </div>
+    </div>
+</p-card>
+
+<div class="flex justify-content-center flex-wrap">
+    <div class="col-3">
+        <p-button styleClass="w-full" class="col-4" label="Save" [rounded]="true" />
+    </div>
+</div>

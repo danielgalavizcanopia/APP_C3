@@ -1,0 +1,314 @@
+<div class="grid pt-3">
+    <div class="col-12 md:col-12">
+        <h5 class="font-bold">ACCUMULATED BUDGET</h5>
+    </div>
+
+    <p-card header="Summary Budget Tracker" class="col-12 md:col-6">
+        <div class="grid">
+            <div class="col-12 md:col-12">
+                <p-table [value]="products" size='small'>
+                    <ng-template #header>
+                        <tr>
+                            <th>Activity</th>
+                            <th>Planned Budget</th>
+                            <th>Actual Spent</th>
+                            <th>Variance</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template #body let-product>
+                        <tr>
+                            <td>{{ product.code }}</td>
+                            <td>{{ product.name }}</td>
+                            <td>{{ product.name }}</td>
+                            <td>{{ product.category }}</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+
+        </div>
+    </p-card>
+
+    <p-card header="Benefit Distribution Tracker" class="col-12 md:col-6">
+        <p-table [value]="customers" sortField="representative.name" sortMode="single" dataKey="representative.name"
+            size='small' rowGroupMode="subheader" groupRowsBy="representative.name">
+            <ng-template #header>
+                <tr>
+                    <th>Beneficiary</th>
+                    <th>Planned Budget</th>
+                    <th>Actual Spent</th>
+                    <th>Variance(%)</th>
+                    <th>Percent of actual</th>
+                    <th></th>
+                </tr>
+            </ng-template>
+            <ng-template #groupheader let-customer let-rowIndex="rowIndex" let-expanded="expanded">
+                <tr>
+                    <td class="font-bold"> {{customer.name}}</td>
+                    <td class="font-bold"> {{customer.name}}</td>
+                    <td class="font-bold"> {{customer.name}}</td>
+                    <td class="font-bold"> {{customer.name}}</td>
+                    <td class="font-bold"> {{customer.name}}</td>
+                    <td>
+                        <button type="button" pButton pRipple [pRowToggler]="customer" text rounded plain class="mr-2"
+                            [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'">
+                        </button>
+                    </td>
+                </tr>
+            </ng-template>
+            <ng-template #expandedrow let-customer>
+                <tr>
+                    <td>
+                        {{customer.name}}
+                    </td>
+                    <td>
+                        {{ customer.country.name }}
+                    </td>
+                    <td>
+                        {{customer.company}}
+                    </td>
+                    <td>
+                        {{customer.company}}
+                    </td>
+                    <td>
+                        {{customer.company}}
+                    </td>
+                    <td></td>
+                </tr>
+            </ng-template>
+            <ng-template #footer>
+                <tr>
+                    <td class="font-bold">Totals</td>
+                    <td class="font-bold">123</td>
+                    <td class="font-bold">122</td>
+                    <td class="font-bold">123</td>
+                    <td class="font-bold">123</td>
+                    <td></td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p-card>
+
+    <div class="col-12 md:col-12">
+        <h5 class="font-bold">PROJECT PROGRESS</h5>
+    </div>
+    <p-card class="col-12">
+        <p-table #dt1 [value]="customers" dataKey="id" [rows]="10" [rowsPerPageOptions]="[10, 25, 50]" size='small'
+            [loading]="loading" [paginator]="true"
+            [globalFilterFields]="['name', 'country.name', 'representative.name']">
+            <ng-template #caption>
+                <div class="grid">
+                    <div class="col-4">
+                        <p-floatlabel>
+                            <p-select inputId="over_label" [options]="macro" optionLabel="name" styleClass="w-full" />
+                            <label for="over_label">Macroprocess</label>
+                        </p-floatlabel>
+                    </div>
+                    <div class="col-6">
+                        <div class="flex">
+                            <div class="flex-1 flex align-items-center pr-3">
+                                <p-floatlabel class="w-full">
+                                    <p-iconfield iconPosition="right">
+                                        <input pInputText type="text" class="w-full"
+                                            (input)="dt1.filterGlobal($event.target, 'contains')" />
+                                        <p-inputicon>
+                                            <i class="pi pi-search"></i>
+                                        </p-inputicon>
+                                    </p-iconfield>
+                                    <label for="over_label">Global Search</label>
+                                </p-floatlabel>
+                            </div>
+                            <div>
+                                <p-button label="Clear" icon="pi pi-filter-slash" severity="secondary"
+                                    (click)="clear(dt1)" />
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-2">
+                        <div class="m-2 p-3 text-center status">
+                            <table class="w-full">
+                                <tr>
+                                    <td>
+                                        <p class="text-bold">Total incidences:</p>
+                                    </td>
+                                    <td>
+                                        <p class="font-bold">2</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="text-bold">Total evidences:</p>
+                                    </td>
+                                    <td>
+                                        <p class="font-bold">8</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template #header>
+                <tr>
+                    <th>
+                        <div class="flex align-items-center flex-wrap">
+                            Subprocess
+                            <p-columnFilter type="text" field="name" display="menu" size="small" />
+                        </div>
+                    </th>
+                    <th>
+                        <div class="flex align-items-center flex-wrap">
+                            Milestones
+                            <p-columnFilter type="date" field="date" display="menu" size="small" />
+                        </div>
+                    </th>
+                    <th>
+                        Evidences
+                    </th>
+                    <th>
+                        <div class="flex align-items-center flex-wrap">
+                            Alert
+                            <p-columnFilter type="boolean" field="verified" display="menu" size="small" />
+                        </div>
+                    </th>
+                    <th class="text-center">
+                        <small>Planned</small><br> Start Date
+                    </th>
+                    <th class="text-center">
+                        <small>Planned</small><br> End Date
+                    </th>
+                    <th class="text-center">
+                        <small>Actual</small><br> Start Date
+                    </th>
+                    <th class="text-center">
+                        <small>Actual</small><br> End Date
+                    </th>
+                    <th></th>
+                </tr>
+            </ng-template>
+            <ng-template #body let-customer>
+                <tr>
+                    <td>
+                        {{ customer.name }}
+                    </td>
+                    <td>
+                        {{ customer.date | date: 'MM/dd/yyyy' }}
+                    </td>
+                    <td>
+                        {{ customer.balance | currency: 'USD' : 'symbol' }}
+                    </td>
+                    <td class="text-center">
+                        <i class="pi" [ngClass]="{
+                        'text-green-500 pi-circle-on': customer.verified,
+                        'text-red-500 pi-circle-fill': !customer.verified
+                    }"></i>
+                    </td>
+                    <td>
+                        {{ customer.date | date: 'MM/dd/yyyy' }}
+                    </td>
+                    <td>
+                        {{ customer.date | date: 'MM/dd/yyyy' }}
+                    </td>
+                    <td>
+                        {{ customer.date | date: 'MM/dd/yyyy' }}
+                    </td>
+                    <td>
+                        {{ customer.date | date: 'MM/dd/yyyy' }}
+                    </td>
+                    <td>
+                        <p-button icon="pi pi-file-check" [rounded]="true" [text]="true"
+                            severity="secondary"></p-button>
+                        <p-button icon="pi pi-upload" [rounded]="true" [text]="true" severity="secondary"></p-button>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+
+
+    </p-card>
+
+    <div class="col-12">
+        <h5 class="font-bold">RISK MANAGEMENT</h5>
+    </div>
+
+    <p-card header="Status Activitys and Inciences" class="col-6">
+        <p-table [value]="products" size='small'>
+            <ng-template #header>
+                <tr>
+                    <th>Report</th>
+                    <th>Report date</th>
+                    <th>Follow Up</th>
+                    <th>Resolution Date</th>
+                </tr>
+            </ng-template>
+            <ng-template #body let-product>
+                <tr>
+                    <td>{{ product.code }}</td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.category }}</td>
+                    <td>{{ product.quantity }}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p-card>
+
+    <p-card header="KPIs by Activity" class="col-6">
+        <p-floatlabel class="col-4">
+            <p-select inputId="over_label" [options]="macro" optionLabel="name" styleClass="w-full" />
+            <label for="over_label">Activity</label>
+        </p-floatlabel>
+        <p-table [value]="products" size='small'>
+            <ng-template #header>
+                <tr>
+                    <th>KPI</th>
+                    <th>Target</th>
+                    <th>Actual</th>
+                    <th>% Achieved</th>
+                    <th>Status</th>
+                </tr>
+            </ng-template>
+            <ng-template #body let-product>
+                <tr>
+                    <td>{{ product.code }}</td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.category }}</td>
+                    <td>{{ product.quantity }}</td>
+                    <td>{{ product.quantity }}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p-card>
+    <div class="col-12">
+        <h5 class="font-bold">IMPACT</h5>
+    </div>
+
+    <p-card class="col-12">
+        <div class="grid">
+            <div class="col-12 md:col-4">
+                <div class="grid">
+                    <div class="col-4">
+                        <a href="">
+                            <img width="100%" src="../../../../../public/1.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 md:col-8 ">
+                <p-table [value]="products" size='small'>
+                    <ng-template #header>
+                        <tr>
+                            <th>Activitys Of “Fin de la pobreza”</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template #body let-product>
+                        <tr>
+                            <td>{{ product.code }}</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </p-card>
+</div>

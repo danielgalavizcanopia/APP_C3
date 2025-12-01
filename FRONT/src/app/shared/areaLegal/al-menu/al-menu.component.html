@@ -1,0 +1,44 @@
+<p-menubar [model]="items" styleClass="center-global">
+    <ng-template pTemplate="start">
+        <img src="../logo-white.png" alt="" width="150"> </ng-template>
+    <ng-template pTemplate="item" let-item let-root="root">
+        <a pRipple class="flex align-items-center p-menuitem-link">
+            <span class="ml-2">{{ item.label }}</span>
+        </a>
+    </ng-template>
+    <ng-template pTemplate="end">
+        <div class="inline-flex">
+            <div>
+                <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" shape="circle"
+                    (click)="sidebarPerfil = true" />
+            </div>
+        </div>
+    </ng-template>
+</p-menubar>
+
+<!--menu perfil y configuracion-->
+<p-drawer [(visible)]="sidebarPerfil" position="right">
+    <ng-template pTemplate="header" stlyleClass="fondo">
+        <div class=" align-items-center gap-2">
+            <p>Administrador general</p>
+
+        </div>
+    </ng-template>
+
+    <div class="text-center fondo pb-3">
+        <img class="avatar" src="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" alt="">
+        <h4 class="m-0 p-0">{{user?.name}}</h4>
+        <small class="m-0 p-0">{{user?.email}}</small>
+    </div>
+
+    <div>
+        <p class="py-2 venta">Configuración</p>
+        <p-menu #menu [model]="avatar" />
+    </div>
+    <ng-template #footer>
+        <div class="flex items-center gap-2">
+            <button pButton label="Logout" icon="pi pi-sign-out" class="w-full" severity="danger" text
+                (click)="logout()"></button>
+        </div>
+    </ng-template>
+</p-drawer>

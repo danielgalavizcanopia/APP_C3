@@ -1,0 +1,12 @@
+<p-menu #menu [model]="items" [popup]="true" />
+<section class="center-global">
+    <div class="flex justify-content-between flex-wrap">
+        <div>
+            <h3>Hi, Welcome back!</h3>
+        </div>
+        <div>
+            <p-button label="New contract" [rounded]="true" icon="pi pi-angle-down" iconPos="right" (click)="menu.toggle($event)"/>
+        </div>
+    </div>
+
+</section>

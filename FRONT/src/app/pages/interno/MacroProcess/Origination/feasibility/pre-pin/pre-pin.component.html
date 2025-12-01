@@ -1,0 +1,232 @@
+<p-card class="col-12">
+    <p class="font-bold pb-3">Pre-PIN Certification Program</p>
+
+    <div class="grid">
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Certification Program</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Registration route</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Methodology</label>
+            </p-floatlabel>
+        </div>
+    </div>
+</p-card>
+
+<p-card class="col-12">
+    <p class="font-bold pb-3">Pre-PIN Technical Assumptions </p>
+
+    <div class="grid">
+        <div class="col-12 md:col-4">
+            <p-floatlabel><span style="color:red">sigue pendiente si se agrega</span>
+                <p-datepicker styleClass="w-full" [iconDisplay]="'input'" [showIcon]="true" inputId="icondisplay" />
+                <label for="over_label">Expected 2nd credit in period</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Project Area (ha)</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Project condition</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Licences permits</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">ERs Calculator Version</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Confidence of Crediting Activity Area</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">UMAFOR</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Authorized Harvesting Volume (m3)</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Licenses Permits</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-12">
+            <p-floatlabel>
+                <textarea pTextarea id="over_label" rows="3" class="w-full"></textarea>
+                <label for="over_label">Underlying activities</label>
+            </p-floatlabel>
+        </div>
+    </div>
+</p-card>
+
+<p-card class="col-12">
+    <p class="font-bold pb-3">Pre-PIN MRV Assumptions</p>
+
+    <div class="grid">
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Estimate permanence</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Estimate sample size</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Estimated MRV requirements</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Estimated Leakage</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Estimated Reversal Risk</label>
+            </p-floatlabel>
+        </div>
+    </div>
+</p-card>
+
+<p-card class="col-12">
+    <p class="font-bold pb-3"> Pre-PIN Economics Assumptions </p>
+
+    <div class="grid">
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Percentage Mkl price</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Confidence of Upfront Costs</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">CBA calculator version</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Project IRR</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Credit type</label>
+            </p-floatlabel>
+        </div>
+    </div>
+</p-card>
+
+<p-card class="col-12">
+    <p class="font-bold pb-3">Pre-PIN  Safeguards Assumptions  </p>
+
+    <div class="grid">
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                 <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Safeguards/no harm approach</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                  <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Social/Community on harm</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                 <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Shareholders engagement</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                 <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Press - negative</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Biodiversity</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Human rights</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Indigenous peoples / cultural gerttage</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">H & S</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Negative EHS</label>
+            </p-floatlabel>
+        </div>
+    </div>
+</p-card>
+
+<div class="flex justify-content-center flex-wrap">
+    <div class="col-3">
+        <p-button styleClass="w-full" class="col-4" label="Save" [rounded]="true" />
+    </div>
+</div>

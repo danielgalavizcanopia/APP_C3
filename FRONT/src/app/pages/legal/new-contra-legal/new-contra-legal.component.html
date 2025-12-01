@@ -1,0 +1,187 @@
+<section class="center-global">
+    <h4>Nuevo contrato</h4>
+    <p-card header="Tipo de contrato">
+        <div class="grid">
+            <div class="col-4">
+                <p-floatlabel>
+                    <input pInputText id="over_label" autocomplete="off" />
+                    <label for="over_label">Nombre del contrato</label>
+                </p-floatlabel>
+            </div>
+            <div class="col-12">
+                <p-floatlabel>
+                    <textarea class="w-full" rows="5" cols="30" pTextarea></textarea>
+                    <label for="over_label">Descripción del contrato</label>
+                </p-floatlabel>
+            </div>
+        </div>
+    </p-card>
+    <br>
+    <p-card header="Datos de la persona">
+        <div class="grid">
+            <div class="col-4">
+                <p-floatlabel>
+                    <p-select [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" class="w-full md:w-56" />
+                    <label for="over_label">Tipo persona</label>
+                </p-floatlabel>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="col-4">
+                <p-floatlabel>
+                    <input pInputText id="over_label" autocomplete="off" />
+                    <label for="over_label">Nombre(s)</label>
+                </p-floatlabel>
+            </div>
+            <div class="col-4">
+                <p-floatlabel>
+                    <input pInputText id="over_label" autocomplete="off" />
+                    <label for="over_label">Primer apellido</label>
+                </p-floatlabel>
+            </div>
+            <div class="col-4">
+                <p-floatlabel>
+                    <input pInputText id="over_label" autocomplete="off" />
+                    <label for="over_label">Segundo apellido</label>
+                </p-floatlabel>
+            </div>
+            <div class="col-4">
+                <p-floatlabel>
+                    <input pInputText id="over_label" autocomplete="off" />
+                    <label for="over_label">Nombre de la empresa</label>
+                </p-floatlabel>
+            </div>
+            <div class="col-4">
+                <p-floatlabel>
+                    <input pInputText id="over_label" autocomplete="off" />
+                    <label for="over_label">CURP</label>
+                </p-floatlabel>
+            </div>
+            <div class="col-4">
+                <p-floatlabel>
+                    <input pInputText id="over_label" autocomplete="off" />
+                    <label for="over_label">RFC</label>
+                </p-floatlabel>
+            </div>
+        </div>
+        <small>Otros datos</small>
+        <div class="grid">
+            <div class="col-3">
+                <p-floatlabel>
+                    <input pInputText id="over_label" autocomplete="off" />
+                    <label for="over_label">Zip code</label>
+                </p-floatlabel>
+            </div>
+            <div class="col-3">
+                <p-floatlabel>
+                    <p-select [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" class="w-full md:w-56" />
+                    <label for="over_label">State</label>
+                </p-floatlabel>
+            </div>
+            <div class="col-3">
+                <p-floatlabel>
+                    <p-select [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" class="w-full md:w-56" />
+                    <label for="over_label">Municipality</label>
+                </p-floatlabel>
+            </div>
+            <div class="col-3">
+                <p-floatlabel>
+                    <p-select [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" class="w-full md:w-56" />
+                    <label for="over_label">Cologn</label>
+                </p-floatlabel>
+            </div>
+            <div class="col-4">
+                <p-floatlabel>
+                    <input pInputText id="over_label" autocomplete="off" />
+                    <label for="over_label">Street</label>
+                </p-floatlabel>
+            </div>
+            <div class="col-2">
+                <p-floatlabel>
+                    <input pInputText id="over_label" autocomplete="off" />
+                    <label for="over_label">Exterior number</label>
+                </p-floatlabel>
+            </div>
+            <div class="col-2">
+                <p-floatlabel>
+                    <input pInputText id="over_label" autocomplete="off" />
+                    <label for="over_label">Interior Number</label>
+                </p-floatlabel>
+            </div>
+            <div class="col-4">
+                <p-floatlabel>
+                    <input pInputText id="over_label" autocomplete="off" />
+                    <label for="over_label">E-Mail</label>
+                </p-floatlabel>
+            </div>
+            <div class="col-4">
+                <p-floatlabel>
+                    <input pInputText id="over_label" autocomplete="off" />
+                    <label for="over_label">Telephone</label>
+                </p-floatlabel>
+            </div>
+        </div>
+    </p-card>
+    <br>
+    <p-card header="Terminos comerciales">
+        <div class="grid">
+            <div class="col-4">
+                <p-floatlabel>
+                    <input pInputText id="over_label" autocomplete="off" />
+                    <label for="over_label">Contraprestación</label>
+                </p-floatlabel>
+            </div>
+            <div class="col-4">
+                <p-floatlabel>
+                    <p-datepicker [(ngModel)]="date1" [showIcon]="true" inputId="buttondisplay" [showOnFocus]="false"
+                        styleClass="w-full" />
+                    <label for="over_label">Vigencia</label>
+                </p-floatlabel>
+            </div>
+            <div class="col-12">
+                <p-floatlabel>
+                    <textarea class="w-full" rows="5" cols="30" pTextarea></textarea>
+                    <label for="over_label">Descripción del contrato</label>
+                </p-floatlabel>
+            </div>
+        </div>
+    </p-card>
+    <br>
+    <p-card header="Documentación">
+        <div class="grid">
+            <div class="col-6">
+                <p>Los documentos señalados son evaluados para poder iniciar un proceso de contrato, si tus documentos
+                    no son los correctos, se te enviara una respuesta para que puedas generar la corrección.</p>
+                <br>
+                <p-table [value]="products" size='small'>
+                    <ng-template #header>
+                        <tr>
+                            <th>Document type</th>
+                            <th>View document</th>
+                            <th width="20%"></th>
+                        </tr>
+                    </ng-template>
+                    <ng-template #body let-product>
+                        <tr>
+                            <td>{{ product.code }}</td>
+                            <td>{{ product.name }}</td>
+                            <td>
+                                <p-button class="pr-2" icon="fa-solid fa-upload" [rounded]="true" [outlined]="true"
+                                    size="small" />
+                                <p-button icon="fa-solid fa-trash-can" [rounded]="true" [outlined]="true"
+                                    severity="danger" size="small" />
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+            <div class="col-6">
+                <p>Requisitos para generar este documento</p>
+            </div>
+        </div>
+    </p-card>
+    <br>
+    <div class="text-center">
+        <p-button styleClass="col-6" [rounded]="true" label="Save" />
+    </div>
+</section>

@@ -1,0 +1,75 @@
+<div>
+    <div class="login-body">
+        <div class="login-content ">
+            <div class="grid m-0 flex align-items-center">
+                <div class="col-12 md:col-6 ">
+                    <div class="login-present">
+                        <img class="pb-5" src="../../../../..//public/logo-white.png" alt="" width="250px">
+                        <h1>HELLO,<br>
+                            <b>Welcome</b>!
+                        </h1>
+                        <h5>Manage your reforestation projects and monitor environmental impact in real time.
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-12 md:col-6">
+                    <div class="login-log flex justify-content-center justify-content-center flex-wrap">
+                        <p-card>
+                            <h2>Log in</h2>
+                            <p class="m-2 mb-5">Enter the username and password to log in.</p>
+                            <div [formGroup]="loginForm" class="login-form grid mb-4">
+                                <div class="col-12">
+                                    @if (visible()) {
+                                    <p-message [life]="3000" [severity]="typeSeverity">{{message}}</p-message>
+                                    }
+                                </div>
+                                <div class="col-12">
+                                    <p-floatlabel>
+                                        <input id="username" formControlName="email" pInputText pSize="large"
+                                            class="w-full" />
+                                        <label for="username">User</label>
+                                    </p-floatlabel>
+                                    @if(loginForm.get('email')?.errors?.['required'] &&
+                                    loginForm.get('email')?.touched){
+                                    <small class="ng-invalid ng-dirty">Email is required</small>
+                                    }
+                                    @if(loginForm.get('email')?.errors?.['email']){
+                                    <small class="ng-invalid">This is an invalid Email</small>
+                                    }
+                                </div>
+
+                                <div class="col-12">
+                                    <p-floatlabel>
+                                        <p-password [toggleMask]="true" formControlName="password" inputId="over_label"
+                                            styleClass="w-full" size="large" [feedback]="false" />
+                                        <label for="over_label">Password</label>
+                                    </p-floatlabel>
+                                    @if(loginForm.get('password')?.errors?.['required'] &&
+                                    loginForm.get('password')?.touched){
+                                    <small class="ng-invalid">Password is required</small>
+                                    }
+                                </div>
+
+                                <div class="col-12 px-5">
+                                    <p-button styleClass="w-full" severity="success" [rounded]="true" label="Access"
+                                        (onClick)="login()" />
+                                </div>
+                            </div>
+
+                            <div class="login-registrer text-center">
+                                Or
+                                <hr>
+                                <p>You don’t have account<a class="font-bold" href=""> Register</a> </p>
+                            </div>
+
+                        </p-card>
+                        
+                    <small class="py-3 text-center">By logging in, you agree to our Terms of Service and Privacy Policy</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,36 @@
+.login-body{
+    background-image: url("../../../../../public/login-fondo.png") ;
+	height: 100vh;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+    width: 100%;
+    position: fixed;
+}
+
+.login-content{
+    height: 100vh;
+}
+
+.login-present h1, h5{
+    color: white;
+}
+
+.login-present{
+margin: 100px;
+}
+
+.login-log{
+    margin: 100px 100px;
+}
+
+.login-form{
+    padding-bottom: 24px;
+}
+
+.login-registrer{
+
+    a{
+     color: #21B6A8;   
+    }
+}

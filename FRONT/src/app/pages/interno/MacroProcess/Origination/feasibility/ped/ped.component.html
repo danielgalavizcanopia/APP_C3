@@ -1,0 +1,124 @@
+<p-card class="col-12">
+    <p class="font-bold pb-3"> AP-Regional Result</p>
+    <div class="grid">
+     <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">PED AP-Regional Result</label>
+            </p-floatlabel>
+        </div>
+     <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Can it include ANP or ADVC?</label>
+            </p-floatlabel>
+        </div>
+     <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Can it include PSA?</label>
+            </p-floatlabel>
+        </div>
+     <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Does it requiere commercial agriculture?</label>
+            </p-floatlabel>
+        </div>
+     <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Does it requiere subsidies?</label>
+            </p-floatlabel>
+        </div>
+    </div>
+</p-card>
+
+<p-card class="col-12">
+    <p class="font-bold pb-3">Local PED on AA</p>
+    <div class="grid">
+     <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Sección PED AA</label>
+            </p-floatlabel>
+        </div>
+     <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Población AA con modelo de REDES</label>
+            </p-floatlabel>
+        </div>
+     <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Actividad agropecuaria AA + 1km</label>
+            </p-floatlabel>
+        </div>
+     <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Encuestas</label>
+            </p-floatlabel>
+        </div>
+     <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Subsidios AA + 1km</label>
+            </p-floatlabel>
+        </div>
+     <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Pendiente AA</label>
+            </p-floatlabel>
+        </div>
+     <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Cambio de cobertura AA</label>
+            </p-floatlabel>
+        </div>
+    </div>
+</p-card>
+
+<p-card class="col-12">
+    <p class="font-bold pb-3">Local Feasibility on AA</p>
+    <div class="grid">
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Resultado PED AA-Local</label>
+            </p-floatlabel>
+        </div>
+
+        <div class="col-12 md:col-4">
+            <div class="flex justify-content-between align-content-center flex-wrap document">
+                <div class="flex align-items-center justify-content-center">
+                    <i class="pi pi-spinner-dotted pi-spin green"></i>
+                    <i class="pi pi-check-circle green"></i>
+                    <a href="">Document PED AA-Local</a>
+                </div>
+                <div>
+                    <p-button icon="pi pi-upload" [rounded]="true" severity="secondary" variant="text"
+                        pTooltip="Upload document" />
+                    <p-button icon="pi pi-trash" [rounded]="true" severity="secondary" variant="text"
+                        pTooltip="Delete document" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 md:col-12">
+            <p-floatlabel><span style="color: red;">no tiene nombre el campo</span>
+                <textarea pTextarea id="over_label" rows="3" class="w-full"></textarea>
+                <label for="over_label">-</label>
+            </p-floatlabel>
+        </div>
+    </div>
+</p-card>
+
+<div class="flex justify-content-center flex-wrap">
+    <div class="col-3">
+        <p-button styleClass="w-full" class="col-4" label="Save" [rounded]="true" />
+    </div>
+</div>

@@ -1,0 +1,203 @@
+<div>
+    <h2>New Project</h2>
+    <p>description</p>
+</div>
+
+<p-card class="col-12 ">
+    <p class="font-bold pb-3">Land Onboarding</p>
+
+    <div class="grid">
+        <div class="col-12 md:col-6">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">State</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-6">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Municipality</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4 flex align-content-center flex-wrap">
+            <div class="col-6">
+                <p-radiobutton name="pizza" value="Cheese" inputId="ingredient1" />
+                <label for="ingredient1" class="ml-2">Yes, is a nucleo agrario</label>
+            </div>
+            <div class="col-6">
+                <p-radiobutton name="pizza" value="Cheese" inputId="ingredient1" />
+                <label for="ingredient1" class="ml-2">No, is a nucleo agrario</label>
+            </div>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Nucleo agrario</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Land tenure type</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-12">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Link Property Polygon</label>
+            </p-floatlabel>
+        </div>
+    </div>
+</p-card>
+
+<p-card class="col-12 ">
+    <p class="font-bold pb-3">Prospect Onboarding</p>
+    <div class="grid">
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Project Counterpart</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Prospect contact name</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Prospect contact role</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Prospect contact telephone</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Prospect contact email</label>
+            </p-floatlabel>
+        </div>
+    </div>
+
+    <p class="font-bold pb-3">Prospect contact address</p>
+    <div class="grid">
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Zip code</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">State</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Municipality</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Cologn</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Street</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-2">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Exterior number</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-2">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Interior Number</label>
+            </p-floatlabel>
+        </div>
+    </div>
+</p-card>
+
+<p-card class="col-12 ">
+    <p class="font-bold pb-5">Project Onboarding</p>
+    <div class="grid">
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <input pInputText type="text" />
+                <label for="over_label">Project Name</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Project type</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Program</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Prospect priority</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-8">
+            <p-floatlabel>
+                <textarea pTextarea id="over_label" rows="3" class="w-full"></textarea>
+                <label for="over_label">Description</label>
+            </p-floatlabel>
+        </div>
+    </div>
+</p-card>
+
+<div class="flex justify-content-end flex-wrap">
+    <div class="col-3">
+        <p-button styleClass="w-full" label="Project Alive" [rounded]="true" severity="warn"
+            (click)="projectAlive('bottom')" />
+    </div>
+    <div class="col-3">
+        <p-button styleClass="w-full" class="col-4" label="Save or Edit" [rounded]="true" />
+    </div>
+</div>
+
+<!--INICIA MODAL PROJECT ALIVE-->
+
+<p-dialog header="Project Alive" [modal]="true" [(visible)]="projectalive" [position]="position" [style]="{ width: '50rem' }">
+    <p>Description</p>
+    <div class="grid">
+        <div class="col-12 md:col-4">
+            <p-floatlabel>
+                <p-select inputId="over_label" [options]="state" optionLabel="name" styleClass="w-full" />
+                <label for="over_label">Project alive</label>
+            </p-floatlabel>
+        </div>
+        <div class="col-12 md:col-12">
+            <p-floatlabel>
+                <textarea pTextarea id="over_label" rows="3" class="w-full"></textarea>
+                <label for="over_label">Description cause</label>
+            </p-floatlabel>
+        </div>
+    </div>
+       <ng-template #footer>
+        <p-button label="Cancel" [text]="true" [rounded]="true" severity="secondary" (click)="visible = false" />
+        <p-button label="Save" [rounded]="true" severity="primary" (click)="visible = false" />
+    </ng-template>
+</p-dialog>

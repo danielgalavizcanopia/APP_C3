@@ -1,0 +1,134 @@
+@import "primeflex/primeflex.css";
+@import "primeicons/primeicons.css";
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Red+Hat+Display&display=swap');
+
+//Conexiones para el css
+
+.Font-P-RedHatDisplay {
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.Font-H-playfair {
+    font-family: "Playfair", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+
+//Inicia los CSS
+html {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    background-color: #F8FAFB;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    color: #5C5C5C;
+    font-size: 16px;
+    @extend .Font-P-RedHatDisplay;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @extend .Font-H-playfair;
+    margin-block-end: 8px;
+    margin-block-start: 8px;
+    color: #163029;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+p {
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+}
+
+small {
+    font-size: 12px;
+    font-weight: 700;
+    color: #596864;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #163029;
+    color: white;
+    padding: 16px 50px;
+    margin-top: 100px;
+}
+
+.p-inputtext,
+.p-password {
+    width: 100%;
+
+}
+
+label {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+section {
+    padding: 0px 32px;
+}
+
+.p-tooltip .p-tooltip-text {
+    font-size: 12px !important;
+}
+
+.username-help {
+    font-size: 11px;
+    font-weight: 400 !important;
+}
+
+.document {
+    background: #E3F0EA;
+    border-radius: 4px;
+    padding: 4px 16px;
+
+    .green {
+        color: #3DB87B;
+    }
+
+    a {
+        padding-left: 16px;
+        color: #163029;
+    }
+}
