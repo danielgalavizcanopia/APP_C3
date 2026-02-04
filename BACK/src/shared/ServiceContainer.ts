@@ -5,10 +5,10 @@ import { UserRepositoryImpl } from '../modules/User/infrastructure/repository/Us
 import { LoginRepositoryImpl } from '../modules/login/infrastructure/repository/LoginRepositoryImpl';
 
 /** CASOS DE USO - USER */
-import { getUsers } from '../modules/User/application/Bin/getUsers';
-import { setUsers } from '../modules/User/application/Bin/setUsers';
-import { LoginUseCase } from '../modules/login/application/LoginUseCase';
-import { RefreshTokenUseCase } from '../modules/login/application/RefreshTokenUseCase';
+import { getUsers } from '../modules/User/Bin/application/getUsers';
+import { setUsers } from '../modules/User/Bin/application/setUsers';
+import { LoginUseCase } from '../modules/login/Bin/application/LoginUseCase';
+import { RefreshTokenUseCase } from '../modules/login/Bin/application/RefreshTokenUseCase';
 
 /** CASOS DE USO - AUTH */
 

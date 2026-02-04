@@ -1,14 +1,12 @@
-// src/modules/login/infrastructure/controllers/LoginController.ts
 import { Request, Response } from 'express';
-import { LoginUseCase } from '../modules/login/application/LoginUseCase';
+import { LoginUseCase } from '../modules/login/Bin/application/LoginUseCase';
 import { LoginCredentials } from '../modules/login/domain/LoginCredentials';
 import { AuthTokens } from '../modules/login/domain/AuthTokens';
-import { RefreshTokenUseCase } from '../modules/login/application/RefreshTokenUseCase';
+import { RefreshTokenUseCase } from '../modules/login/Bin/application/RefreshTokenUseCase';
 import { ServiceContainer } from '../shared/ServiceContainer';
 
 
 export class LoginController {
-  // ✅ Constructor vacío → pero usa casos de uso del contenedor
   constructor() {}
 
   login = async (req: Request, res: Response): Promise<Response> => {
@@ -35,6 +33,7 @@ export class LoginController {
       return res.status(200).json({
         success: true,
         accessToken: tokens.accessToken,
+        user: tokens.userPermissions,
         message: 'Inicio de sesión exitoso'
       });
 
