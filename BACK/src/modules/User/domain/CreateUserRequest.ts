@@ -54,25 +54,25 @@ export class CreateUserRequest {
   @MaxLength(100, { message: 'El departamento no puede superar los 100 caracteres' })
   departamento: string = '';
 
-  @IsInt({ message: 'Idlocationkey debe ser un número entero' })
-  @IsNotEmpty({ message: 'Idlocationkey es obligatorio' })
+  // @IsInt({ message: 'Idlocationkey debe ser un número entero' })
+  // @IsNotEmpty({ message: 'Idlocationkey es obligatorio' })
   Idlocationkey: number = 0;
 
-  @IsInt()
-  @IsNotEmpty({ message: 'Idstatususer es obligatorio' })
+  // @IsInt()
+  // @IsNotEmpty({ message: 'Idstatususer es obligatorio' })
   Idstatususer: number = 0;
 
-  @IsInt()
-  @IsNotEmpty({ message: 'Idusertype es obligatorio' })
+  // @IsInt()
+  // @IsNotEmpty({ message: 'Idusertype es obligatorio' })
   Idusertype: number = 0;
 
-  @IsInt()
-  @IsNotEmpty({ message: 'Idpositionuser es obligatorio' })
+  // @IsInt()
+  // @IsNotEmpty({ message: 'Idpositionuser es obligatorio' })
   Idpositionuser: number = 0;
 
-  @IsInt()
-  @IsNotEmpty({ message: 'Idoperationmenu es obligatorio' })
-  Idoperationmenu: number = 0;
+  // @IsInt()
+  // @IsNotEmpty({ message: 'Idoperationmenu es obligatorio' })
+  // Idoperationmenu: number = 0;
 
   @IsOptional()
   @IsString()
