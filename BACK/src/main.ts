@@ -35,7 +35,7 @@ export class Server {
     this.app.use(express.json());
     this.app.use(cors());
      this.app.use(cors({
-      origin: process.env.FRONTEND_URL || 'http://localhost:4200',
+      origin: process.env.FRONTEND_URL || 'http://localhost:400',
       credentials: true
     }));
       // Cookie parser for refresh tokens
